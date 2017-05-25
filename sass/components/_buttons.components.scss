@@ -1,0 +1,137 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Buttons
+// * Mixins
+// * Contextual variations
+//   - Component utilities
+//   - Default
+//   - Primary
+//
+// References:
+// 1. https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_buttons.scss
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Mixins
+// ==================================================================================================
+@mixin button-variant(
+  $variable-1: xx,
+  $variable-2: xx,
+  $variable-3: xx
+) {
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Contextual variations
+// ==================================================================================================
+
+// Component utilities
+// - utility classes for use in component scope
+// ------------------------------------------------
+.component-utility {
+  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Default
+// ------------------------------------------------
+.button-default {
+  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Primary
+// ------------------------------------------------
+.button-primary {
+  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox

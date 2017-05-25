@@ -1,0 +1,181 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Tables
+// * Mixins
+// * Contextual variations
+//   - Component utilities
+//   - Default
+//   - Primary
+//
+// References:
+// 1. https://
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Mixins
+// ==================================================================================================
+
+@mixin table-variant(
+  $table-border: solid 1px #cccccc,
+  $table-column-width-min: 150px,
+  $th-cellpadding: 20px 10px,
+  $th-textalign-horizontal: left,
+  $th-textalign-vertical: middle,
+  $td-cellpadding: 10px,
+  $td-textalign-horizontal: left,
+  $td-textalign-vertical: top
+) {
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  width: 100%;
+  border: $table-border;
+  border-collapse: collapse;
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  thead {
+    // Styles
+  }
+
+  tbody {
+    // Styles
+  }
+
+  tr {
+    // Styles
+  }
+
+  th {
+    white-space: nowrap;
+    min-width: $table-column-width-min;
+    padding: $th-cellpadding;
+    border: $table-border;
+    text-align: $th-textalign-horizontal;
+    vertical-align: $th-textalign-vertical;
+  }
+
+  td {
+    min-width: $table-column-width-min;
+    padding: $td-cellpadding;
+    border: $table-border;
+    text-align: $td-textalign-horizontal;
+    vertical-align: $td-textalign-vertical;
+  }
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  // - shouldn't write in mixin scope because some component hasn't same media query
+}
+
+// Contextual variations
+// ==================================================================================================
+
+// Component utilities
+// - utility classes for use in component scope
+// ------------------------------------------------
+.table-responsive {
+  overflow-x: auto;
+}
+
+// Component utilities
+// - utility classes for use in component scope
+// ------------------------------------------------
+.component-utility {
+  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}
+
+// Browser variations
+// >>>>>>>>>>>>>>>>>>>>>>>
+// IE
+// Safari
+// Firefox
+
+// Default
+// ------------------------------------------------
+.table-default {
+  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @include table-variant;
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+  @media (max-width: 768px) {
+    @include table-variant(
+      $th-cellpadding: 10px 5px,
+      $td-cellpadding: 5px
+    );
+  }
+}
+
+// Primary
+// ------------------------------------------------
+.table-primary {
+  // SPECIFIC VARIABLES(USE ONLY IN COMPONENT)
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MIXINS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF COMPONENT ITSELF
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF CHILD CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // STYLES OF STATE WITH MODIFIER CLASS
+  // >>>>>>>>>>>>>>>>>>>>>>>
+
+  // MEDIA QUERY
+  // >>>>>>>>>>>>>>>>>>>>>>>
+}

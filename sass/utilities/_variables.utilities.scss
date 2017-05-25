@@ -1,0 +1,440 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Variables
+// * Base URL
+// * Prefix for class name
+// * Abbreviation for class name
+// * Media queries (Physical width of device screens)
+// * Colors
+//   - Primary color
+//   - Secondary color
+//   - Functional color: Text
+//   - Functional color: Validation
+// * Typography
+//
+// Source:
+// 1. https://
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// Path file
+// ==================================================================================================
+$path-image: '../../assets/images/' !default;
+$path-icon: '../../assets/images/icons/' !default;
+$path-font: '../../assets/fonts/' !default;
+
+// Path file maps
+$path-file-maps: (
+  'image': $path-image,
+  'icon': $path-icon,
+  'font': $path-font
+);
+
+// Path file maps function
+@function path-file($layer) {
+  @return map-get($path-file-maps, $layer);
+}
+
+// Prefix for class name
+// ==================================================================================================
+$prefix-binding: 'bind' !default;
+$prefix-state: 'state' !default;
+$prefix-independent: 'indep' !default;
+$prefix-unique: 'uniq' !default;
+
+// Prefix maps
+$prefix-maps: (
+  'binding': $prefix-binding,
+  'state': $prefix-state,
+  'independent': $prefix-independent,
+  'unique': $prefix-unique
+);
+
+// Prefix maps function
+@function prefix($layer) {
+  @return map-get($prefix-maps, $layer);
+}
+
+// Abbreviation for class name
+// ==================================================================================================
+$abbreviation-extra-small: 'xs' !default;
+$abbreviation-small: 'sm' !default;
+$abbreviation-medium: 'md' !default;
+$abbreviation-large: 'lg' !default;
+
+$abbreviation-mobile: 'mob' !default;
+$abbreviation-phablet: 'pha' !default;
+$abbreviation-tablet: 'tab' !default;
+$abbreviation-labtop: 'lab' !default;
+$abbreviation-desktop: 'des' !default;
+
+// Abbreviation maps
+$abbreviation-maps: (
+  'extra-small': $abbreviation-extra-small,
+  'small': $abbreviation-small,
+  'medium': $abbreviation-medium,
+  'large': $abbreviation-large,
+  'mobile': $abbreviation-mobile,
+  'phablet': $abbreviation-phablet,
+  'tablet': $abbreviation-tablet,
+  'labtop': $abbreviation-labtop,
+  'desktop': $abbreviation-desktop
+);
+
+// Abbreviation maps function
+@function abbreviation($layer) {
+  @return map-get($abbreviation-maps, $layer);
+}
+
+// Media queries (Physical width of device screens)
+// ==================================================================================================
+// Mobile (mob)
+$screen-mobile-xs: 320px !default;
+$screen-mobile-sm: 360px !default;
+$screen-mobile-md: 375px !default;
+$screen-mobile-lg: 411px !default;
+
+// Phablet (pha)
+$screen-phablet-xs: 480px !default;
+$screen-phablet-sm: 540px !default;
+$screen-phablet-md: 640px !default;
+$screen-phablet-lg: 731px !default;
+
+// Tablet (tab)
+$screen-tablet-sm: 768px !default;
+$screen-tablet-md: 960px !default;
+$screen-tablet-lg: 1024px !default;
+
+// Laptop (lab)
+$screen-labtop-sm: 1280px !default;
+$screen-labtop-md: 1366px !default;
+$screen-labtop-lg: 1440px !default;
+
+// Desktop (des)
+$screen-desktop-sm: 1600px !default;
+$screen-desktop-md: 1920px !default;
+$screen-desktop-lg: 2560px !default;
+
+// Screen max
+$screen-mobile-xs-max: ($screen-mobile-sm - 1) !default;
+$screen-mobile-sm-max: ($screen-mobile-md - 1) !default;
+$screen-mobile-md-max: ($screen-mobile-lg - 1) !default;
+$screen-mobile-lg-max: ($screen-phablet-xs - 1) !default;
+
+$screen-phablet-xs-max: ($screen-phablet-sm - 1) !default;
+$screen-phablet-sm-max: ($screen-phablet-md - 1) !default;
+$screen-phablet-md-max: ($screen-phablet-lg - 1) !default;
+$screen-phablet-lg-max: ($screen-tablet-sm - 1) !default;
+
+$screen-tablet-sm-max: ($screen-tablet-md - 1) !default;
+$screen-tablet-md-max: ($screen-tablet-lg - 1) !default;
+$screen-tablet-lg-max: ($screen-labtop-sm - 1) !default;
+
+$screen-labtop-sm-max: ($screen-labtop-md - 1) !default;
+$screen-labtop-md-max: ($screen-labtop-lg - 1) !default;
+$screen-labtop-lg-max: ($screen-desktop-sm - 1) !default;
+
+$screen-desktop-sm-max: ($screen-desktop-md - 1) !default;
+$screen-desktop-md-max: ($screen-desktop-lg - 1) !default;
+
+// Screen maps
+$screen-maps: (
+  // Mobile (mob)
+  'mobile-xs': $screen-mobile-xs,
+  'mobile-sm': $screen-mobile-sm,
+  'mobile-md': $screen-mobile-md,
+  'mobile-lg': $screen-mobile-lg,
+
+  // Phablet (pha)
+  'phablet-xs': $screen-phablet-xs,
+  'phablet-sm': $screen-phablet-sm,
+  'phablet-md': $screen-phablet-md,
+  'phablet-lg': $screen-phablet-lg,
+
+  // Tablet (tab)
+  'tablet-sm': $screen-tablet-sm,
+  'tablet-md': $screen-tablet-md,
+  'tablet-lg': $screen-tablet-lg,
+
+  // Laptop (lab)
+  'labtop-sm': $screen-labtop-sm,
+  'labtop-md': $screen-labtop-md,
+  'labtop-lg': $screen-labtop-lg,
+
+  // Desktop (des)
+  'desktop-sm': $screen-desktop-sm,
+  'desktop-md': $screen-desktop-md,
+  'desktop-lg': $screen-desktop-lg,
+
+  // Mobile max (mob)
+  'mobile-xs-max': $screen-mobile-xs-max,
+  'mobile-sm-max': $screen-mobile-sm-max,
+  'mobile-md-max': $screen-mobile-md-max,
+  'mobile-lg-max': $screen-mobile-lg-max,
+
+  // Phablet max (pha)
+  'phablet-xs-max': $screen-phablet-xs-max,
+  'phablet-sm-max': $screen-phablet-sm-max,
+  'phablet-md-max': $screen-phablet-md-max,
+  'phablet-lg-max': $screen-phablet-lg-max,
+
+  // Tablet max (tab)
+  'tablet-sm-max': $screen-tablet-sm-max,
+  'tablet-md-max': $screen-tablet-md-max,
+  'tablet-lg-max': $screen-tablet-lg-max,
+
+  // Laptop max (lab)
+  'labtop-sm-max': $screen-labtop-sm-max,
+  'labtop-md-max': $screen-labtop-md-max,
+  'labtop-lg-max': $screen-labtop-lg-max,
+
+  // Desktop max (des)
+  'desktop-sm-max': $screen-desktop-sm-max,
+  'desktop-md-max': $screen-desktop-md-max
+);
+
+// Screen maps function
+@function screen($layer) {
+  @return map-get($screen-maps, $layer);
+}
+
+// Colors
+// ==================================================================================================
+
+// # Web style guide > color แบ่งออกเป็น 3 แบบ
+// 1. Role color เป็นจัดกลุ่มโดยใช้ความสำคัญของสี เช่น Primay, Secondary, Extended (Ref: http://carbondesignsystem.com/style/colors/swatches)
+//    - ภายในกลุ่มจะมีสีต่างๆ คละกันไปหมด ไม่มีการไล่ Tint หรือ Shade ที่ชัดเจน
+// 2. Group color เป็นจัดกลุ่มโดยใช้ของลักษณะของสี เช่น Gray, Red, Yellow, Blue (Ref: https://wordpress.com/design-handbook/colors/)
+//    - ภายในกลุ่มจะมีสีตั้งต้น และจะไล่ Tint หรือ Shade จากสีตั้งต้นนั้น
+// 3. Role & Group color (Ref: https://atlassian.design/guidelines/brand/color-1)
+
+// # ขั้นตอนการทำ Color variables structure
+// 1. นำ Web style guide: colors จาก Design มาสร้าง Variables base color โดยเทียบกับ HTML color names (https://www.w3schools.com/colors/colors_groups.asp)
+// 2. นำ Variables base color มาจัดหมวดหมู่โดยการทำ Maps และ Function
+
+// # เรื่องการไล่ระดับตัวเลขของ Light และ Dark
+// - ถ้าดูของ Wordpress (Ref: https://wordpress.com/design-handbook/colors/) ที่ Gray จะเห็นว่ามีการกำหนด Base color จากนั้นก็นำ Base color นั้นไปใช้ในการไล่ Shade
+//   ซึ่งทำให้การตั้งชื่อ Variable ทำได้ง่ายมาก แต่ในกรณีที่ Designer มีการไล่ Tint หรือ Shade ของสีมา แต่ไม่ได้ระบุว่าใช้ Base color อะไรในการไล่
+//   ก็ให้จัดเรียงสีจากเข้มไปอ่อน โดยลำดับของตัวเลขในการไล่ Tint/Shade ให้เพิ่มที่ละ 10 เช่น xxxxx-light-10, xxxxx-light-20, ...
+//   ตัวเลขที่เพิ่มขึ้นจุดประสงค์เพื่อสื่อว่าอ่อนลงหรือเข้มขึ้นเท่านั้น ไม่ได้มีความเป๊ะว่า xxxxx-light-20 ต้องอ่อนกว่า xxxxx-light-10 เท่ากับ 2 เท่า
+// - ไม่มีข้อกำหนดตายตัวว่าจะใช้ยังไง แต่ก็ได้สร้างความสัมพันธ์ระหว่างรหัสสีและระดับตัวเลขไว้เพื่อเป็นไกด์
+//   ในกรณีเจอการไล่ Shade แบบข้ามช๊อต เช่น
+//   #5a6872 > $color-dark-slate-gray
+//   #152934 > $color-dark-slate-gray-90
+//   #0f212e > $color-dark-slate-gray-100
+//   ก็จะใช้ไกด์ช่วยในการตั้งตัวเลข
+
+//   Light
+//   --
+//   #f9.. = 100
+//   #e9.. = 95
+//   #d9.. = 90
+//   #c9.. = 85
+//   #b9.. = 80
+//   #c9.. = 75
+//   #a9.. = 70
+//   #9.. = 65
+//   #8.. = 60
+//   #7.. = 55
+//   #6.. = 50
+//   #5.. = 45
+//   #4.. = 40
+//   #3.. = 30
+//   #2.. = 20
+//   #1.. = 10
+
+//   Dark
+//   --
+//   #0.. = 100
+//   #1.. = 90
+//   #2.. = 80
+//   ...
+//   #9.. = 10
+
+// # suffix ที่ใช้ในการตั้งชื่อ
+// - light/medium/dark (medium ปกติจะไม่ใช้ แต่ก็เป็นตัวเลือกในการตั้งชื่อในกรณีมีการไล่สีแค่ 3 ระดับ)
+// - light-10 ... light-100
+// - dark-10 ... dark-100
+
+// Primary color
+// ------------------------------------------------
+$color-steel-blue: #3d70b2;
+$color-corn-flower-blue: #5596e6;
+$color-medium-aqua-marine: #41d6c3;
+$color-white: #ffffff;
+$color-slate-gray: #8c9ba5;
+$color-slate-gray-light-10: #dfe3e6;
+$color-slate-gray-light-20: #f0f3f6;
+$color-slate-gray-light-30: #f5f7fa;
+$color-dark-slate-gray: #5a6872;
+$color-dark-slate-gray-dark-90: #152934;
+$color-dark-slate-gray-dark-100: #0f212e;
+$color-light-cyan: #ecf1f7;
+
+// Primary color maps
+$color-primary-maps: (
+  'steel-blue': $color-steel-blue,
+  'corn-flower-blue': $color-corn-flower-blue,
+  'medium-aqua-marine': $color-medium-aqua-marine,
+  'white': $color-white,
+  'slate-gray': $color-slate-gray,
+  'slate-gray-light-10': $color-slate-gray-light-10,
+  'slate-gray-light-20': $color-slate-gray-light-20,
+  'slate-gray-light-30': $color-slate-gray-light-30,
+  'dark-slate-gray': $color-dark-slate-gray,
+  'dark-slate-gray-dark-90': $color-dark-slate-gray-dark-90,
+  'dark-slate-gray-dark-100': $color-dark-slate-gray-dark-100,
+  'light-cyan': $color-light-cyan
+);
+
+// Primary color function
+@function color-primary($layer) {
+  @return map-get($color-primary-maps, $layer);
+}
+
+// Secondary color
+// ------------------------------------------------
+$color-crimson: #e71d32;
+$color-lime-green : #5aa700;
+$color-gold: #efc100;
+$color-dodger-blue: #5aaafa;
+$color-black: #0f212e;
+$color-black-light-10: #152935;
+$color-medium-purple: #ba8ff7;
+$color-rebecca-purple: #734098;
+$color-light-sea-green: #00b4a0;
+$color-teal: #008571;
+$color-steel-blue: #3d70b2;
+
+// Secondary color maps
+$color-secondary-maps: (
+  'crimson': $color-crimson,
+  'lime-green': $color-lime-green,
+  'gold': $color-gold,
+  'dodger-blue': $color-dodger-blue,
+  'black': $color-black,
+  'black-light-10': $color-black-light-10,
+  'medium-purple': $color-medium-purple,
+  'rebecca-purple': $color-rebecca-purple,
+  'light-sea-green': $color-light-sea-green,
+  'teal': $color-teal,
+  'steel-blue': $color-steel-blue
+);
+
+// Secondary color function
+@function color-secondary($layer) {
+  @return map-get($color-secondary-maps, $layer);
+}
+
+// Functional color: Text
+// ------------------------------------------------
+$color-text-headline: color-secondary(black);
+$color-text-subhead: color-primary(dark-slate-gray);
+$color-text-paragraph: color-primary(corn-flower-blue);
+$color-text-link: color-primary(medium-aqua-marine);
+$color-text-link-hover: color-secondary(light-sea-green);
+$color-text-link-active: color-secondary(gold);
+
+// Functional color: Text > maps
+$color-text-maps: (
+  'headline': $color-text-headline,
+  'subhead': $color-text-subhead,
+  'paragraph': $color-text-paragraph,
+  'link': $color-text-link,
+  'link-hover': $color-text-link-hover,
+  'link-active': $color-text-link-active
+);
+
+// Functional color: Text > function
+@function color-text($layer) {
+  @return map-get($color-text-maps, $layer);
+}
+
+// Functional color: Validation
+// ------------------------------------------------
+$color-validation-info: color-primary(corn-flower-blue) !default;
+$color-validation-success: color-primary(medium-aqua-marine) !default;
+$color-validation-warning: color-secondary(gold) !default;
+$color-validation-error: color-secondary(crimson) !default;
+$color-validation-disable: color-primary(slate-gray-light-10) !default;
+
+// Functional color: Validation > maps
+$color-validation-maps: (
+  'info': $color-validation-info,
+  'success': $color-validation-success,
+  'warning': $color-validation-warning,
+  'error': $color-validation-error,
+  'disable': $color-validation-disable
+);
+
+// Functional color: Validation > function
+@function color-validation($layer) {
+  @return map-get($color-validation-maps, $layer);
+}
+
+// Typography (size & line-height)
+// ==================================================================================================
+
+// Language: Thai
+$fontsize-headline1-th: 60px !default;
+$lineheight-headline1-th: 60px !default;
+$fontsize-headline2-th: 48px !default;
+$lineheight-headline2-th: 48px !default;
+$fontsize-headline3-th: 36px !default;
+$lineheight-headline3-th: 36px !default;
+$fontsize-headline4-th: 28px !default;
+$lineheight-headline4-th: 28px !default;
+$fontsize-headline5-th: 24px !default;
+$lineheight-headline5-th: 24px !default;
+$fontsize-headline6-th: 18px !default;
+$lineheight-headline6-th: 18px !default;
+
+$fontsize-subhead1-th: 60px !default;
+$lineheight-subhead1-th: 60px !default;
+$fontsize-subhead2-th: 48px !default;
+$lineheight-subhead2-th: 48px !default;
+$fontsize-subhead3-th: 36px !default;
+$lineheight-subhead3-th: 36px !default;
+$fontsize-subhead4-th: 28px !default;
+$lineheight-subhead4-th: 28px !default;
+$fontsize-subhead5-th: 24px !default;
+$lineheight-subhead5-th: 24px !default;
+$fontsize-subhead6-th: 18px !default;
+$lineheight-subhead6-th: 18px !default;
+
+// Language: English
+$fontsize-headline1-en: 60px !default;
+$lineheight-headline1-en: 60px !default;
+$fontsize-headline2-en: 48px !default;
+$lineheight-headline2-en: 48px !default;
+$fontsize-headline3-en: 36px !default;
+$lineheight-headline3-en: 36px !default;
+$fontsize-headline4-en: 28px !default;
+$lineheight-headline4-en: 28px !default;
+$fontsize-headline5-en: 24px !default;
+$lineheight-headline5-en: 24px !default;
+$fontsize-headline6-en: 18px !default;
+$lineheight-headline6-en: 18px !default;
+
+$fontsize-subhead1-en: 60px !default;
+$lineheight-subhead1-en: 60px !default;
+$fontsize-subhead2-en: 48px !default;
+$lineheight-subhead2-en: 48px !default;
+$fontsize-subhead3-en: 36px !default;
+$lineheight-subhead3-en: 36px !default;
+$fontsize-subhead4-en: 28px !default;
+$lineheight-subhead4-en: 28px !default;
+$fontsize-subhead5-en: 24px !default;
+$lineheight-subhead5-en: 24px !default;
+$fontsize-subhead6-en: 18px !default;
+$lineheight-subhead6-en: 18px !default;
+
+// Title
+// ==================================================================================================
+
+// Subtitle
+// ------------------------------------------------

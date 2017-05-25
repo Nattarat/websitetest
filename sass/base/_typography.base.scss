@@ -1,0 +1,143 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Typography
+// * @font-face
+//   - Prompt
+//   - Noto
+// * Calibration
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+@charset 'utf-8';
+
+// @font-face
+// ==================================================================================================
+
+// Prompt
+// - Regular
+// - Regular italic
+// - Bold
+// - Bold italic
+// - Extra-Light
+// - Extra-Light italic
+// ------------------------------------------------
+@font-face {
+  font-family: 'Prompt-Regular';
+  src: url('../fonts/Prompt-Regular.eot?v=4.3.0');
+  src: url('../fonts/Prompt-Regular.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+       url('../fonts/Prompt-Regular.woff2?v=4.3.0') format('woff2'),
+       url('../fonts/Prompt-Regular.woff?v=4.3.0') format('woff'),
+       url('../fonts/Prompt-Regular.ttf?v=4.3.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Prompt-Italic';
+  src: url('../fonts/Prompt-Italic.eot?v=4.3.0');
+  src: url('../fonts/Prompt-Italic.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+       url('../fonts/Prompt-Italic.woff2?v=4.3.0') format('woff2'),
+       url('../fonts/Prompt-Italic.woff?v=4.3.0') format('woff'),
+       url('../fonts/Prompt-Italic.ttf?v=4.3.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Prompt-Bold';
+  src: url('../fonts/Prompt-Bold.eot?v=4.3.0');
+  src: url('../fonts/Prompt-Bold.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+       url('../fonts/Prompt-Bold.woff2?v=4.3.0') format('woff2'),
+       url('../fonts/Prompt-Bold.woff?v=4.3.0') format('woff'),
+       url('../fonts/Prompt-Bold.ttf?v=4.3.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Prompt-BoldItalic';
+  src: url('../fonts/Prompt-BoldItalic.eot?v=4.3.0');
+  src: url('../fonts/Prompt-BoldItalic.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+       url('../fonts/Prompt-BoldItalic.woff2?v=4.3.0') format('woff2'),
+       url('../fonts/Prompt-BoldItalic.woff?v=4.3.0') format('woff'),
+       url('../fonts/Prompt-BoldItalic.ttf?v=4.3.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Prompt-ExtraLight';
+  src: url('../fonts/Prompt-ExtraLight.eot?v=4.3.0');
+  src: url('../fonts/Prompt-ExtraLight.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+       url('../fonts/Prompt-ExtraLight.woff2?v=4.3.0') format('woff2'),
+       url('../fonts/Prompt-ExtraLight.woff?v=4.3.0') format('woff'),
+       url('../fonts/Prompt-ExtraLight.ttf?v=4.3.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Prompt-ExtraLightItalic';
+  src: url('../fonts/Prompt-ExtraLightItalic.eot?v=4.3.0');
+  src: url('../fonts/Prompt-ExtraLightItalic.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+       url('../fonts/Prompt-ExtraLightItalic.woff2?v=4.3.0') format('woff2'),
+       url('../fonts/Prompt-ExtraLightItalic.woff?v=4.3.0') format('woff'),
+       url('../fonts/Prompt-ExtraLightItalic.ttf?v=4.3.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Noto
+// - Regular
+// - Bold
+// ------------------------------------------------
+@font-face {
+  font-family: 'NotoSansThai-Regular';
+  src: url('../fonts/NotoSansThai-Regular.eot?v=4.3.0');
+  src: url('../fonts/NotoSansThai-Regular.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+       url('../fonts/NotoSansThai-Regular.woff2?v=4.3.0') format('woff2'),
+       url('../fonts/NotoSansThai-Regular.woff?v=4.3.0') format('woff'),
+       url('../fonts/NotoSansThai-Regular.ttf?v=4.3.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSansThai-Bold';
+  src: url('../fonts/NotoSansThai-Bold.eot?v=4.3.0');
+  src: url('../fonts/NotoSansThai-Bold.eot?#iefix&v=4.3.0') format('embedded-opentype'),
+       url('../fonts/NotoSansThai-Bold.woff2?v=4.3.0') format('woff2'),
+       url('../fonts/NotoSansThai-Bold.woff?v=4.3.0') format('woff'),
+       url('../fonts/NotoSansThai-Bold.ttf?v=4.3.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Calibration
+// - Base
+// - Window
+// - Mac
+// - iPhone/iPad
+// - Android
+// - 2 font in 2 language
+// ==================================================================================================
+
+// Base
+// ------------------------------------------------
+
+// Window
+// ------------------------------------------------
+
+// Mac
+// ------------------------------------------------
+
+// iPhone/iPad
+// ------------------------------------------------
+
+// Android
+// ------------------------------------------------
+
+// 2 font in 2 language
+// ------------------------------------------------
